@@ -1,0 +1,11 @@
+{
+  "name": "Elements Milton",
+  "short_name": "Elements Milton",
+  "icons": [
+    {"src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/images/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ],
+  "theme_color": "#3D4A3A",
+  "background_color": "#FAF7F2",
+  "display": "standalone"
+}
