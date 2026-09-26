@@ -127,7 +127,7 @@ module.exports = async function handler(req, res) {
     utm_term: asString(body.utm_term) || refererUtm.utm_term || null,
     utm_content: asString(body.utm_content) || refererUtm.utm_content || null,
     project_name: 'Elements Milton',
-    source: 'elements-milton-landing',
+    source: asString(body.source) || SITE_ORIGIN,
     form_location: asString(body.form_location || body.formLocation) || 'amp',
     form_type: 'vip-registration',
     page_path: asString(body.page_path) || '/amp.html',

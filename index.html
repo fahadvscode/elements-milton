@@ -105,9 +105,9 @@ nav.primary a:hover{color:var(--gold);}
 label{display:block;font-size:.78rem;font-weight:600;margin-bottom:5px;}
 input,select{width:100%;padding:11px 12px;border:1.5px solid transparent;border-radius:8px;font-size:.95rem;font-family:inherit;background:#fff;color:var(--ink);}
 input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px;}
-.consent-row{display:flex;gap:9px;align-items:flex-start;margin:12px 0 14px;}
-.consent-row input{width:auto;margin-top:4px;}
-.consent-row label{font-weight:400;font-size:.75rem;color:#E4EBDF;}
+.consent-row{display:flex;gap:8px;align-items:flex-start;margin:10px 0 12px;}
+.consent-row input{width:auto;margin-top:3px;flex:none;}
+.consent-row label{font-weight:400;font-size:.62rem;line-height:1.35;color:#E4EBDF;margin:0;}
 .honeypot{position:absolute;left:-9999px;opacity:0;height:0;}
 .form-status{font-size:.85rem;margin-top:10px;min-height:1.2em;}
 .form-status.ok{color:#D7F3C8;}
@@ -204,14 +204,36 @@ footer.site a:hover{color:#fff;}
 .to-top.show{display:grid;}
 .to-top img{width:16px;height:22px;}
 
-.popup-overlay{position:fixed;inset:0;background:rgba(12,16,10,.62);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;}
+.popup-overlay{position:fixed;inset:0;background:rgba(12,16,10,.72);display:none;align-items:center;justify-content:center;z-index:100;padding:16px;backdrop-filter:blur(6px);}
 .popup-overlay.show{display:flex;}
-.popup-card{background:#fff;color:var(--ink);border-radius:18px;max-width:460px;width:100%;position:relative;overflow:hidden;}
-.popup-card .form-body{color:var(--ink);}
-.popup-card .form-sub,.popup-card .consent-row label{color:var(--muted);}
-.popup-card h3{color:var(--ink);}
-.popup-close{position:absolute;top:10px;right:10px;background:#fff;border:0;border-radius:50%;width:36px;height:36px;cursor:pointer;z-index:2;display:grid;place-items:center;}
-.popup-close img{width:18px;height:18px;object-fit:contain;}
+.popup-card{background:var(--olive-deep);color:#fff;border-radius:20px;max-width:720px;width:100%;position:relative;overflow:hidden;display:grid;grid-template-columns:.9fr 1.1fr;box-shadow:0 30px 80px rgba(0,0,0,.45);max-height:min(92vh,720px);}
+.popup-visual{position:relative;min-height:100%;background:url("https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418772_9_Elements-Hero-Landscape.jpg") center/cover no-repeat;padding:28px 24px;display:flex;flex-direction:column;justify-content:flex-end;}
+.popup-visual::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,22,.15) 0%,rgba(20,32,22,.82) 100%);}
+.popup-visual-inner{position:relative;z-index:1;}
+.popup-visual .brand-lockup{width:168px;margin-bottom:18px;display:block;}
+.popup-visual .eyebrow{color:var(--gold);}
+.popup-visual h3{color:#fff;font-size:1.7rem;letter-spacing:-.03em;margin-bottom:8px;}
+.popup-visual p{color:#E4EBDF;font-size:.9rem;margin:0;max-width:28ch;}
+.popup-form{padding:28px 26px 24px;background:#fff;color:var(--ink);overflow:auto;min-height:0;}
+.popup-form h3{color:var(--ink);font-size:1.35rem;margin-bottom:4px;}
+.popup-form .form-sub{color:var(--muted);font-size:.88rem;margin-bottom:14px;}
+.popup-form .form-row{gap:10px;margin-bottom:10px;}
+.popup-form input[type="text"],.popup-form input[type="email"],.popup-form input[type="tel"]{padding:10px 11px;border:1.5px solid var(--line);}
+.popup-form .consent-row{margin:8px 0 12px;}
+.popup-form .consent-row label{font-size:.58rem;line-height:1.3;color:#7A8276;}
+.popup-form .btn{width:100%;}
+.popup-close{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.92);border:0;border-radius:50%;width:36px;height:36px;cursor:pointer;z-index:3;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.18);}
+.popup-close img{width:16px;height:16px;object-fit:contain;}
+@media(max-width:760px){
+  .popup-card{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);max-width:440px;max-height:92vh;}
+  .popup-visual{min-height:0;padding:18px 18px 14px;}
+  .popup-visual .brand-lockup{width:132px;margin-bottom:8px;}
+  .popup-visual h3{font-size:1.2rem;margin-bottom:4px;}
+  .popup-visual p{display:none;}
+  .popup-form{padding:16px 16px 14px;}
+  .popup-form h3{font-size:1.15rem;}
+  .popup-form .form-sub{margin-bottom:10px;font-size:.82rem;}
+}
 
 @media(max-width:980px){
   .hero-grid,.about-grid,.register-wrap,.grid-2{grid-template-columns:1fr;}
@@ -305,7 +327,7 @@ footer.site a:hover{color:#fff;}
           <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="consent-row">
             <input type="checkbox" id="h-consent" name="consent" required>
-            <label for="h-consent">I consent to receive electronic communications about Elements Milton and similar pre-construction opportunities. I understand I can withdraw consent at any time using the unsubscribe link in any message.</label>
+            <label for="h-consent">I consent to receive emails about Elements Milton and similar pre-construction homes. Unsubscribe anytime.</label>
           </div>
           <button type="submit" class="btn">Get Priority Access</button>
           <div class="form-status" role="status" aria-live="polite"></div>
@@ -557,7 +579,7 @@ footer.site a:hover{color:#fff;}
           <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="consent-row">
             <input type="checkbox" id="f-consent" name="consent" required>
-            <label for="f-consent">I consent to receive electronic communications about Elements Milton and similar pre-construction opportunities. I understand I can withdraw consent at any time using the unsubscribe link in any message.</label>
+            <label for="f-consent">I consent to receive emails about Elements Milton and similar pre-construction homes. Unsubscribe anytime.</label>
           </div>
           <button type="submit" class="btn">Get Priority Access</button>
           <div class="form-status" role="status" aria-live="polite"></div>
@@ -619,10 +641,17 @@ footer.site a:hover{color:#fff;}
 <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
   <div class="popup-card">
     <button class="popup-close" id="popupClose" aria-label="Close"><img src="https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418772_6_close.png" alt=""></button>
-    <div class="form-top" aria-hidden="true"></div>
-    <div class="form-body">
-      <h3 id="popupTitle">Don't Miss the Elements Milton Launch</h3>
-      <p class="form-sub">Register now for first access to floor plans and pricing.</p>
+    <div class="popup-visual">
+      <div class="popup-visual-inner">
+        <img class="brand-lockup" src="https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418773_11_elements-yellow.png" alt="Elements. a new district">
+        <span class="eyebrow">VIP Registration</span>
+        <h3 id="popupTitle">Don't miss the October launch.</h3>
+        <p>60 freehold towns in Milton. Floor plans and pricing go to registrants first.</p>
+      </div>
+    </div>
+    <div class="popup-form">
+      <h3>Get priority access</h3>
+      <p class="form-sub">Free to register. No obligation.</p>
       <form id="leadFormPopup" class="lead-form" data-form-location="popup" novalidate>
         <div class="form-row">
           <div><label for="p-first">First name</label><input id="p-first" name="firstName" type="text" required autocomplete="given-name"></div>
@@ -635,7 +664,7 @@ footer.site a:hover{color:#fff;}
         <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="consent-row">
           <input type="checkbox" id="p-consent" name="consent" required>
-          <label for="p-consent">I consent to receive electronic communications about Elements Milton and similar pre-construction opportunities. I understand I can withdraw consent at any time using the unsubscribe link in any message.</label>
+          <label for="p-consent">I consent to receive emails about Elements Milton and similar pre-construction homes. Unsubscribe anytime.</label>
         </div>
         <button type="submit" class="btn">Get Priority Access</button>
         <div class="form-status" role="status" aria-live="polite"></div>
@@ -757,7 +786,7 @@ document.querySelectorAll('.lead-form').forEach(form=>{
       utm_term: utm.utm_term,
       utm_content: utm.utm_content,
       project_name: 'Elements Milton',
-      source: 'elements-milton-landing',
+      source: window.location.origin,
       form_location: form.dataset.formLocation,
       form_type: 'vip-registration',
       page_path: window.location.pathname,
