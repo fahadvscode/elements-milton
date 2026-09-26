@@ -6,6 +6,7 @@
 <title>Elements Milton | Freehold Towns at Bronte St S &amp; Britannia Rd, Milton</title>
 <meta name="description" content="Elements Milton: 60 freehold double-car-garage townhomes by Trinity Point Developments at Bronte Street South &amp; Britannia Road, Milton. 3-5 bedrooms, from the $600s. Register for priority access.">
 <link rel="canonical" href="https://elements-milton.ca/">
+<link rel="amphtml" href="https://elements-milton.ca/amp.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Elements Milton | Freehold Towns in Milton, Ontario">
 <meta property="og:description" content="60 freehold double-car-garage townhomes by Trinity Point Developments at Bronte St S &amp; Britannia Rd, Milton. 3-5 bedrooms, from the $600s.">
@@ -764,8 +765,22 @@ document.querySelectorAll('.lead-form').forEach(form=>{
       priority: 'high'
     };
     try {
-      const { error } = await sb.from('elements_milton_leads').insert([payload]);
-      if (error) throw error;
+      let saved = false;
+      try {
+        const apiRes = await fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const apiJson = await apiRes.json().catch(()=>({}));
+        if (apiRes.ok && apiJson.ok) saved = true;
+      } catch (apiErr) {
+        console.warn(apiErr);
+      }
+      if (!saved) {
+        const { error } = await sb.from('elements_milton_leads').insert([payload]);
+        if (error) throw error;
+      }
       if (window.gtag) gtag('event','form_submit',{form_location: form.dataset.formLocation});
       if (window.fbq) fbq('track','Lead');
       window.location.href = '/thank-you.html';

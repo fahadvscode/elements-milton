@@ -15,6 +15,7 @@
 
 ## Pages
 - [Overview](https://elements-milton.ca/): Project summary, quick facts, and community overview
+- [AMP](https://elements-milton.ca/amp.html): AMP HTML version of the landing page for Google Search
 - [Collection](https://elements-milton.ca/#collection): 3-5 bedroom freehold town collection tiers
 - [Pricing](https://elements-milton.ca/#pricing): Pricing and registration incentives
 - [Location](https://elements-milton.ca/#location): Neighbourhood, conservation areas, and transit
