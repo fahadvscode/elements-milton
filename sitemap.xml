@@ -1,28 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://elements-milton.ca/</loc>
-    <xhtml:link rel="amphtml" href="https://elements-milton.ca/amp.html"/>
     <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://elements-milton.ca/amp.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="amphtml" href="https://elements-milton.ca/amp.html"/>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418772_9_Elements-Hero-Landscape.jpg</image:loc>
+      <image:title>Elements Milton townhomes in Milton, Ontario</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418773_11_elements-yellow.png</image:loc>
+      <image:title>Elements a new district</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418774_19_slider-01.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418774_20_slider-02.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418774_21_slider-03.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418774_22_slider-04.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418775_23_slider-05.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418775_24_slider-06.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418775_25_slider-07.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418775_26_slider-08.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418775_27_slider-09.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418776_28_slider-10.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.preconfactory.com/storage/v1/object/public/rental-documents/1790447418776_29_slider-11.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://elements-milton.ca/privacy.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://elements-milton.ca/terms.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.3</priority>
   </url>
 </urlset>
