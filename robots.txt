@@ -23,6 +23,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://elements-milton.ca/sitemaps/urlset.xml
 Sitemap: https://elements-milton.ca/sitemap.xml
-Sitemap: https://elements-milton.ca/sitemap.txt

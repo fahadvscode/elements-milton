@@ -8,15 +8,15 @@
     }
   ],
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/api/sitemap" },
-    { "source": "/sitemap.xml/", "destination": "/api/sitemap" },
-    { "source": "/sitemaps/urlset.xml", "destination": "/api/sitemap" }
+    { "source": "/amp", "destination": "/amp.html" },
+    { "source": "/amp/", "destination": "/amp.html" }
   ],
   "headers": [
     {
-      "source": "/sitemap.txt",
+      "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=UTF-8" },
+        { "key": "Content-Type", "value": "application/xml; charset=UTF-8" },
+        { "key": "Content-Disposition", "value": "inline" },
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
